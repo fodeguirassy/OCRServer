@@ -1,1 +1,1 @@
-web: gunicorn app:protected-wildwood-78491
+web: gunicorn app:server
