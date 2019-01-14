@@ -1,2 +1,4 @@
 source virtualenv/bin/activate [pythonenv]
 deactivate
+
+heroku logs --app protected-wildwood-78491 -t

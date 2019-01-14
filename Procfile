@@ -1,1 +1,1 @@
-web: gunicorn run:app
+web: gunicorn -c file:config run:app
