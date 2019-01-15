@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 app = Flask(__name__)
 
-im = Image.open("non_contrarie.bmp")
+im = Image.open('non_contrarie.bmp')
 
 x_start = 70
 y_start = 50
@@ -17,7 +17,7 @@ col_max = 11
 
 labels_array = []
 models_array = []
-raw_labels_array = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t"]
+raw_labels_array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't']
 raw_models_array = []
 
 for i in range(row_max):
@@ -42,8 +42,8 @@ for i in range(row_max):
 
 models_array = np.array(models_array)
 # models_array = models_array.reshape((models_array.shape[0], models_array.shape[1] * models_array.shape[2]))
-print("models Array shape {}".format(models_array.shape))
-print("Labels Array shape {}".format(np.array(labels_array).shape))
+#print("models Array shape {}".format(models_array.shape))
+#print("Labels Array shape {}".format(np.array(labels_array).shape))
 
 zipped_array = np.array(list(zip(models_array, labels_array)))
 # print("Zipped Array {}".format(zipped_array))
@@ -53,24 +53,24 @@ clf = RandomForestClassifier(n_estimators=100, max_depth=2, random_state=0, min_
 clf.fit(models_array, labels_array)
 
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def hello():
     if request.method == 'POST':
         json = request.get_json(force=True)
-        return json["label"]
+        return json['label']
     else:
-        return "Hello World"
+        return 'Hello World'
 
 
-@app.route("/add", methods=["POST"])
+@app.route('/add', methods=['POST'])
 def add_example():
     json = request.get_json(force=True)
 
     # print(json["data"])
     # print(json["label"])
 
-    new_model = np.array(json["data"])
-    new_label = json["label"]
+    new_model = np.array(json['data'])
+    new_label = json['label']
 
     raw_models_array.append(new_model)
     labels_array.append(new_label)
@@ -81,10 +81,10 @@ def add_example():
     return new_label
 
 
-@app.route("/predict", methods=["POST"])
+@app.route('/predict', methods=['POST'])
 def predict():
     json = request.get_json(force=True)
-    new = np.array(json["data"])
+    new = np.array(json['data'])
     new = new.reshape((1, -1))
     predict = clf.predict(new)
     print(predict)
