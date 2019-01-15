@@ -58,9 +58,13 @@ clf = RandomForestClassifier(n_estimators=100, max_depth=2, random_state=0, min_
 clf.fit(models_array, labels_array)
 
 
-@app.route("/api")
+@app.route("/", methods=['GET', 'POST'])
 def hello():
-    return "Hello World"
+    if request.method == 'POST':
+        json = request.get_json(force=True)
+        return json["label"]
+    else:
+        return "Hello World"
 
 
 @app.route("/api/add", methods=["POST"])
