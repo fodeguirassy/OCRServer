@@ -1,12 +1,6 @@
-coding = 'utf-8'
 from flask import Flask, request
 from PIL import Image
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn import neighbors
-from collections import Counter
-import coremltools
-from sklearn import tree, svm
 from sklearn.ensemble import RandomForestClassifier
 
 app = Flask(__name__)
