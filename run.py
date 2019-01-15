@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 app = Flask(__name__)
 
-im = Image.open('non_contrarie.bmp')
+im = Image.open("non_contrarie.bmp")
 
 x_start = 70
 y_start = 50
@@ -18,14 +18,14 @@ col_max = 11
 
 labels_array = []
 models_array = []
-raw_labels_array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't']
+raw_labels_array = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t"]
 raw_models_array = []
 
 for i in range(row_max):
     for j in range(col_max):
         current_box = (x_start, y_start, x_start + x_delta, y_start + y_delta)
         current_region = im.crop(current_box)
-        current_region = current_region.convert('L')
+        current_region = current_region.convert("L")
 
         pix = np.array(current_region)
         pix = pix.reshape((current_region.size[0] * current_region.size[1],))
@@ -51,7 +51,6 @@ def add_example():
         return json['label']
     else:
         return 'It is a GET'
-
 
 
 if __name__ == '__main__':
