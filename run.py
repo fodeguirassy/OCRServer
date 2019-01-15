@@ -8,12 +8,12 @@ app = Flask(__name__)
 
 
 @app.route('/', methods=['GET', 'POST'])
-def hello():
+def add_example():
     if request.method == 'POST':
         json = request.get_json(force=True)
         return json['label']
     else:
-        return 'Hello World'
+        return 'It is a GET'
 
 
 if __name__ == '__main__':
