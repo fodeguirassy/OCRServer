@@ -62,6 +62,7 @@ clf.fit(models_array, labels_array)
 def hello():
     return "Hello World"
 
+
 @app.route("/add", methods=["POST"])
 def add_example():
     json = request.get_json(force=True)

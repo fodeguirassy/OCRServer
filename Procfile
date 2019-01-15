@@ -1,1 +1,1 @@
-web: gunicorn -c file:config run:app
+web: gunicorn -c file:config --limit-request-line 8190 run:app
