@@ -2,3 +2,5 @@ source virtualenv/bin/activate [pythonenv]
 deactivate
 
 heroku logs --app protected-wildwood-78491 -t
+
+web: gunicorn -c file:config --limit-request-line 8190 run:app
