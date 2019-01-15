@@ -73,11 +73,11 @@ def add_example():
     new_model = np.array(json["data"])
     new_label = json["label"]
 
-    raw_models_array.append(new_model)
-    labels_array.append(new_label)
+    #raw_models_array.append(new_model)
+    #labels_array.append(new_label)
 
-    new_arr = np.array(raw_models_array)
-    clf.fit(new_arr, labels_array)
+    #new_arr = np.array(raw_models_array)
+    #clf.fit(new_arr, labels_array)
 
     return new_label
 
