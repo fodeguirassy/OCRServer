@@ -30,7 +30,7 @@
           <entry key="Procfile" value="56" />
           <entry key="Python Console" value="26" />
           <entry key="cmds" value="38" />
-          <entry key="py" value="2034" />
+          <entry key="py" value="2100" />
           <entry key="test" value="1" />
           <entry key="txt" value="3" />
         </counts>
@@ -38,7 +38,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="98" />
-          <entry key="Python" value="2060" />
+          <entry key="Python" value="2126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -96,8 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            <state relative-caret-position="349">
+              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
               <folding>
                 <element signature="e#20#52#0" expanded="true" />
               </folding>
@@ -213,6 +213,11 @@
               <item name="mlvirtualenv" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="mlvirtualenv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mlvirtualenv" type="462c0819:PsiDirectoryNode" />
+              <item name="pythonenv" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -264,7 +269,7 @@
     <frame x="-1209" y="23" width="1208" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17152658" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17152658" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -278,7 +283,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.46528497" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.46528497" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32971507" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -385,8 +390,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="349">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="e#20#52#0" expanded="true" />
           </folding>
