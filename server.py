@@ -58,12 +58,12 @@ clf = RandomForestClassifier(n_estimators=100, max_depth=2, random_state=0, min_
 clf.fit(models_array, labels_array)
 
 
-@app.route("/api")
+@app.route("/")
 def hello():
     return "Hello World"
 
 
-@app.route("/api/add", methods=["POST"])
+@app.route("/add", methods=["POST"])
 def add_example():
     json = request.get_json(force=True)
 
@@ -82,7 +82,7 @@ def add_example():
     return new_label
 
 
-@app.route("/api/predict", methods=["POST"])
+@app.route("/predict", methods=["POST"])
 def predict():
     json = request.get_json(force=True)
     new = np.array(json["data"])
