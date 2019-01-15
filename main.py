@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 from PIL import Image
 import numpy as np
 from sklearn.model_selection import train_test_split
