@@ -1,3 +1,4 @@
+#coding = 'utf-8'
 from flask import Flask, request
 from PIL import Image
 import numpy as np
